@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Form Submission</h1>
+
+    <button><a href="{% url 'home' %}">Go to Home Page</a></button>
+
+    <br><br><br>
+
+    <!-- Contact Form -->
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        <label for="firstname">First Name</label>
+        <input type="text" name="f_name" id="firstname" placeholder="Enter yor First Name" required>
+        <br><br>
+
+        <label for="lastname">Last Name</label>
+        <input type="text" name="l_name" id="lastname" required>
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+
+        <label for="mobile">Mobile</label>
+        <input type="number" name="mobile" id="mobile" required>
+        <br><br>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
